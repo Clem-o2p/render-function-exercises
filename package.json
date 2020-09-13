@@ -1,0 +1,19 @@
+{
+  "name": "render-exercise",
+  "version": "1.0.0",
+  "description": "An exercise to get the basics of a render function",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve",
+    "test": "jest"
+  },
+  "author": "Clément Ollivier",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2",
+    "jsdom": "^16.4.0",
+    "serve": "^11.3.2"
+  }
+}
