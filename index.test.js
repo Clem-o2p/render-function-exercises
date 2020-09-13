@@ -12,6 +12,8 @@ const mockRenderContext = dom.window.document;
 
 const HelloTitle = render(mockRenderContext, "h1", "Hello");
 
+const Paragraph = render(mockRenderContext, "p", "lorem ipsum dolor sit amet");
+
 test("Render an empty <div>", () => {
   expect(render(mockRenderContext, "div")).toStrictEqual("<div></div>");
 });
@@ -22,4 +24,8 @@ test("Render an h1 tag saying 'Hello'", () => {
 
 test("Render a div tag containing an h1 saying 'Hello'", () => {
   expect(render(mockRenderContext, "div", HelloTitle)).toStrictEqual("<div><h1>Hello</h1></div>");
+});
+
+test("Render a div tag containing an h1 saying 'Hello' and a paragraph of dummy text", () => {
+  expect(render(mockRenderContext, "div", [HelloTitle, Paragraph])).toStrictEqual("<div><h1>Hello</h1><p>lorem ipsum dolor sit amet</p></div>");
 });
